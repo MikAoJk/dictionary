@@ -40,6 +40,12 @@ const Dictionary = () => {
                     onChange={(e) => {
                         setSearchWord(e.target.value);
                     }}
+                    onKeyDown={
+                        (event) => {
+                            if (event.key == 'Enter')
+                                getMeaning();
+                        }
+                    }
                 />
                 <button
                     onClick={() => {
